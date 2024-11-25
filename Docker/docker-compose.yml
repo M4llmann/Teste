@@ -1,0 +1,47 @@
+services:
+  db:
+    image: postgres:14
+    container_name: banco-db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+    volumes:
+      - ./dataPostgresql:/var/lib/postgresql/data  # Mapeia a pasta /docker/dataPostgresql para persistência
+    ports:
+      - "54321:5432"  # Porta exposta para o PostgreSQL
+    networks:
+      - tentativa-network
+
+  app-banco:
+    build:
+      context: ../AppBanco   # Caminho relativo para o backend
+      dockerfile: Dockerfile
+    container_name: app-banco
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/postgres  # Conexão ao banco de dados
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+    ports:
+      - "8080:8080"  # Porta para acessar a API do Spring Boot
+    depends_on:
+      - db  # O backend depende do banco de dados
+    networks:
+      - tentativa-network
+
+  # frontend:
+  #   build:
+  #     context: ../frontend  # Caminho relativo para o frontend
+  #     dockerfile: Dockerfile
+  #   container_name: banco-frontend
+  #   ports:
+  #     - "4200:8080"  # Porta para o frontend Angular
+  #   command: ["npm", "run", "start"]  # Comando para iniciar o servidor Angular
+  #   depends_on:
+  #     - app-banco  # O frontend depende do backend
+  #   networks:
+  #     - tentativa-network
+
+networks:
+  tentativa-network:
+    driver: bridge

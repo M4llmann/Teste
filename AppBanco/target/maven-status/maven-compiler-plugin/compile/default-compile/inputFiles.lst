@@ -1,0 +1,15 @@
+C:\Users\Mallmann\Desktop\Tentativa\AppBanco\src\main\java\com\Backend\AppBanco\AppBancoApplication.java
+C:\Users\Mallmann\Desktop\Tentativa\AppBanco\src\main\java\com\Backend\AppBanco\controller\ContaController.java
+C:\Users\Mallmann\Desktop\Tentativa\AppBanco\src\main\java\com\Backend\AppBanco\controller\UsuarioController.java
+C:\Users\Mallmann\Desktop\Tentativa\AppBanco\src\main\java\com\Backend\AppBanco\dto\ContaDTO.java
+C:\Users\Mallmann\Desktop\Tentativa\AppBanco\src\main\java\com\Backend\AppBanco\dto\ErroDTO.java
+C:\Users\Mallmann\Desktop\Tentativa\AppBanco\src\main\java\com\Backend\AppBanco\dto\TransacaoDTO.java
+C:\Users\Mallmann\Desktop\Tentativa\AppBanco\src\main\java\com\Backend\AppBanco\entity\ContaEntity.java
+C:\Users\Mallmann\Desktop\Tentativa\AppBanco\src\main\java\com\Backend\AppBanco\entity\TransacaoEntity.java
+C:\Users\Mallmann\Desktop\Tentativa\AppBanco\src\main\java\com\Backend\AppBanco\entity\UsuarioEntity.java
+C:\Users\Mallmann\Desktop\Tentativa\AppBanco\src\main\java\com\Backend\AppBanco\repository\ContaRepository.java
+C:\Users\Mallmann\Desktop\Tentativa\AppBanco\src\main\java\com\Backend\AppBanco\repository\TransacaoRepository.java
+C:\Users\Mallmann\Desktop\Tentativa\AppBanco\src\main\java\com\Backend\AppBanco\repository\UsuarioRepository.java
+C:\Users\Mallmann\Desktop\Tentativa\AppBanco\src\main\java\com\Backend\AppBanco\service\ContaService.java
+C:\Users\Mallmann\Desktop\Tentativa\AppBanco\src\main\java\com\Backend\AppBanco\service\TransacaoService.java
+C:\Users\Mallmann\Desktop\Tentativa\AppBanco\src\main\java\com\Backend\AppBanco\service\UsuarioService.java

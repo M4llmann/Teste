@@ -1,0 +1,15 @@
+com\Backend\AppBanco\AppBancoApplication.class
+com\Backend\AppBanco\dto\ContaDTO.class
+com\Backend\AppBanco\dto\TransacaoDTO.class
+com\Backend\AppBanco\service\UsuarioService.class
+com\Backend\AppBanco\controller\ContaController.class
+com\Backend\AppBanco\service\TransacaoService.class
+com\Backend\AppBanco\entity\TransacaoEntity.class
+com\Backend\AppBanco\controller\UsuarioController.class
+com\Backend\AppBanco\entity\UsuarioEntity.class
+com\Backend\AppBanco\repository\UsuarioRepository.class
+com\Backend\AppBanco\entity\ContaEntity.class
+com\Backend\AppBanco\repository\ContaRepository.class
+com\Backend\AppBanco\service\ContaService.class
+com\Backend\AppBanco\dto\ErroDTO.class
+com\Backend\AppBanco\repository\TransacaoRepository.class
