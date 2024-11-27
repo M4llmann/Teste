@@ -1,13 +1,14 @@
 package com.Backend.AppBanco.service;
 
-import com.Backend.AppBanco.entity.UsuarioEntity;
-import com.Backend.AppBanco.repository.UsuarioRepository;
+import java.util.Optional;
+
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.validation.Valid;
-import java.util.Optional;
+import com.Backend.AppBanco.entity.UsuarioEntity;
+import com.Backend.AppBanco.repository.UsuarioRepository;
 
 @Service
 public class UsuarioService {

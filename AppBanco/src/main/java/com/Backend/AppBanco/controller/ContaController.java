@@ -80,13 +80,22 @@ public ContaController(ContaService contaService, TransacaoService transacaoServ
     @PostMapping("/{idConta}/deposito")
     public ResponseEntity<?> realizarDeposito(@PathVariable Integer idConta, @RequestParam BigDecimal valor) {
         try {
-            // Realiza o depósito diretamente com o valor obtido como parâmetro
             ContaEntity conta = contaService.realizarDeposito(idConta, valor);
             return ResponseEntity.ok(toContaDTO(conta));
         } catch (RuntimeException ex) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
         }
     }
+    @PostMapping("/{idConta}/saque")
+    public ResponseEntity<?> realizarSaque(@PathVariable Integer idConta, @RequestParam BigDecimal valor) {
+        try {
+            ContaEntity conta = contaService.realizarSaque(idConta, valor);
+            return ResponseEntity.ok(toContaDTO(conta));
+        } catch (RuntimeException ex) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
+        }
+    }
+
     @GetMapping("/{idConta}/extrato")
 public ResponseEntity<?> obterExtrato(@PathVariable Integer idConta) {
     try {
@@ -104,14 +113,7 @@ public ResponseEntity<?> obterExtrato(@PathVariable Integer idConta) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
     }
 }
-
-    @PostMapping("/{idConta}/saque")
-    public ResponseEntity<?> realizarSaque(@PathVariable Integer idConta, @RequestParam BigDecimal valor) {
-        try {
-            ContaEntity conta = contaService.realizarSaque(idConta, valor);
-            return ResponseEntity.ok(toContaDTO(conta));
-        } catch (RuntimeException ex) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
-        }
-    }
+    
 }
+
+
